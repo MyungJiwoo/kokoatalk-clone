@@ -1,0 +1,56 @@
+.screen-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--horizontal-space);
+    padding-top: 40px;
+    margin-bottom: 15px;
+}
+
+.screen-header__title {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.screen-header__icons {
+    position: relative;
+}
+
+.screen-header__icons span {
+    margin-left: 25px;
+}
+
+.cog__more {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: tomato;
+
+    position: relative;
+    left: 145px;
+    bottom: 22px;
+}
+
+.cog__find {
+    width: 4px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: tomato;
+
+    position: relative;
+    left: 95px;
+    bottom: 22px;
+}
+
+@keyframes rotateCog {
+    from {
+        transform: none;
+    }
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+.screen-header__icons .fa-cog:hover {
+    animation: rotateCog 1s ease-in-out infinite;
+}

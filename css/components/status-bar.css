@@ -1,0 +1,32 @@
+.status-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    padding: 5px 3px;
+}
+
+.status-bar__column {
+    width: 33%; /* 그냥 flex에서 같은 너비로 중앙 시켜버리면 각 div의 크기가 맞지 않아서 비율이 깨짐 => css hack으로 너비 33% 주면서 위치 조정 */
+}
+
+.status-bar__column:first-child span {
+    margin-right: 5px;
+}
+
+.status-bar__column:nth-child(2) {
+    display: flex;
+    justify-content: center;
+}
+
+.status-bar__column:last-child {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; /* 강의에는 없었는데 내 컴퓨터에선 이거 없으면 수직 중앙이 아니라 추가해줌 */
+}
+
+.status-bar__column .fa-battery-full {
+    margin: 0px 5px;
+}

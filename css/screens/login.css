@@ -1,0 +1,67 @@
+.welcome-header {
+    margin: 90px 0px; /* 상하로 margin=90px */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 600;
+}
+
+.welcome-header__title {
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+.welcome-header__text {
+    width: 60%;
+    opacity: 0.7;
+}
+
+/* .login-form__input / .login-form__btn / .login-form__a 로 클래스명으로 작성하는게 더 보기 좋음 */
+
+/* login-form이라는 id를 가진 form 안에 있는 input에만 적용 */
+#login-form {
+    display: flex;
+    flex-direction: column;
+    /* 치수 재는 익스텐션 : Page Ruler Redux */
+    margin: 0px 30px;
+}
+
+#login-form input {
+    border: none;
+    font-size: 18px;
+    padding: 15px 0px;
+    margin-bottom: 25px;
+}
+
+/* submit 버튼을 제외하고 나머지 input 창에 적용 */
+#login-form input:not([type="submit"]) {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    /* 색이 부드럽게 변경되게 돕는 애니메이션 */
+    transition: border-color 0.3s ease-in-out;
+}
+
+#login-form input::placeholder {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+/* 색상 따오는 익스텐션 : ColorZlla */
+#login-form input:focus {
+    border-color: var(--yellow);
+}
+
+#login-form input[type="submit"] {
+    background-color: var(--yellow);
+    /* 커서에 not-allowed, progress 등등 다양한 속성 적용 가능 */
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 20px 0;
+}
+
+#login-form a {
+    text-align: center;
+    text-decoration: none;
+    /* inherit 속성으로 부모로부터 상속받음, default 색은 검정 */
+    color: inherit;
+    font-size: 13px;
+}

@@ -1,0 +1,7 @@
+/* import해서 사용 */
+:root {
+    --yellow: #fae100;
+    --horizontal-space: 25px;
+    --main-border: 1px solid rgba(0, 0, 0, 0.2);
+    --color-gray: rgba(0, 0, 0, 0.5);
+}
